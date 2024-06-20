@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="icon" href="./img/13.PNG" type="image/x-icon" />
+    <link rel="stylesheet" href="./signup.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="./img/13.PNG" alt="Logo">
+            <div class="title"><h2>海洋寓言</h2></div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="./index.html">首頁</a></li>
+                <li><a href="./introduce.html">海龜介紹</a></li>
+                <li><a href="./protect.html">環境保護</a></li>
+                <li><a href="./activity.html">活動介紹</a></li>
+                <li><a href="./signup.html"  target="_blank">活動報名</a></li>
+                <li><a href="./connection.html">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="Q">
+            <h1>UCC (You See Sea)</h1>
+            
+            <form id="signupForm" action="/submit" method="post">
+                <div class="body">
+                    <p>活動地點：石門區白沙灣</p>
+                </div>
+                <div class="body">
+                    <p>選擇時間：
+                        <div class="time">
+                            <input type="radio" id="option1" name="options01" value="option1" required>
+                            <label for="option1">7/6(六)14:00 - 17:00</label><br>
+                        
+                            <input type="radio" id="option2" name="options01" value="option2" required>
+                            <label for="option2">7/13(六)14:00 - 17:00</label><br>
+                        
+                            <input type="radio" id="option3" name="options01" value="option3" required>
+                            <label for="option3">7/20(六)14:00 - 17:00</label><br>
+
+                            <input type="radio" id="option4" name="options01" value="option4" required>
+                            <label for="option3">7/27(六)14:00 - 17:00</label><br>
+                        </div>   
+                    </p>
+                </div>
+            
+                <div class="body">
+                    <p>參加人數</p>
+                    <input type="number" id="number" name="number" min="1" max="10" required>
+                </div>
+
+                <div class="body">
+                    <p>聯絡人</p>
+                    <input type="text" id="name" name="name" placeholder="請填寫本名" required>
+                </div>
+
+                <div class="body">
+                    <p>連絡電話</p>
+                    <input type="number" pattern="[09]{4}(\-[0-9]{6})" placeholder="ex. 0912-345678" required>
+                </div>
+
+                <div class="body">
+                    <p>Email</p>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="body">
+                    <p>是否參加DIY活動</p>
+                        <div class="YN">
+                            <input type="radio" id="yes" name="options02" value="option5" required>
+                            <label for="option5">是，我要參加</label>
+
+                            <input type="radio" id="no" name="options02" value="option6" required>
+                            <label for="option6">否</label>
+                        </div>
+                    <P>*註：若有參加DIY，當天會收取一人50元的費用</P>
+                </div>
+
+                <div class="button">
+                    <button type="submit" class="submit-btn">送出</button>
+                    <button type="reset" class="reset-btn">重置</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+    
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            event.target.reset();
+            alert("表單已送出");
+        });
+    </script>
+</body>
+</html>

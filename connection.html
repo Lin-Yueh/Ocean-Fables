@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="icon" href="./img/13.PNG" type="image/x-icon" />
+    <link rel="stylesheet" href="./connection.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="logo-container">
+            <img src="./img/13.PNG" alt="Logo">
+            <div class="title"><h2>海洋寓言</h2></div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="./index.html">首頁</a></li>
+                <li><a href="./introduce.html">海龜介紹</a></li>
+                <li><a href="./protect.html">環境保護</a></li>
+                <li><a href="./activity.html">活動介紹</a></li>
+                <li><a href="./signup.html" target="_blank">活動報名</a></li>
+                <li><a href="./connection.html">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="aaa">
+            <h1>聯絡資訊</h1>
+            <h3>電話：0988-776-633</h3>
+            <h3>Mail：haigui_@gmail.com</h3>
+        </div>
+        
+        <div class="we">
+            <div class="s1122003">
+                <div class="gallery">
+                    <div class="photo" data-large-src="img/a1.jpg"></div>
+                </div>
+                <div class="text">
+                    <b>
+                    <p>1122003 劉筱畇</p><br>
+                    <p>地球只有一個，保護海洋，減少塑料污染，一起為海洋生態健康努力！</p>
+                    </b>
+                </div>
+            </div>
+            
+            <div class="s1122005">
+                <div class="text">
+                    <b>
+                    <p>1122005 林玥瑱</p><br>
+                    <p>對我們的地球來說，最危險的想法就是認為總會有其他人來拯救它。</p>
+                    </b>
+                </div>
+                <div class="gallery">
+                    <div class="photo" data-large-src="img/a2.jpg"></div>
+                </div>
+            </div>
+
+            <div class="s1122015">
+                <div class="gallery">
+                    <div class="photo" data-large-src="img/a5.jpg"></div>
+                </div>
+                <div class="text">
+                    <b>
+                    <p>1122015 劉舫蓉</p><br>
+                    <p>一個小小的行動，或許就能拯救更多海洋生物的生命，一起守護這片湛藍的海洋吧。</p>
+                    </b>
+                </div>
+            </div>
+
+            <div class="s1122045">
+                <div class="text">
+                    <b>
+                    <p>1122045 吳昀潼</p><br>
+                    <p>做一個有希望保護環境的人，而不是污染環境的罪人。</p>
+                    </b>
+                </div>
+                <div class="gallery">
+                    <div class="photo" data-large-src="img/a4.jpg"></div>
+                </div>
+            </div>
+
+            <div class="s1122048">
+                <div class="gallery">
+                    <div class="photo" data-large-src="img/a3.jpg"></div>
+                </div>
+                <div class="text">
+                    <b>
+                    <p>1122048 廖盈芃</p><br>
+                    <p>海洋環境的恢復不僅是一個任務，更是我們的責任。</p>
+                    </b>
+                </div>
+            </div>
+            <div class="modal" id="modal">
+                <div class="modalBody" id="modalBody">
+                    <img id="modalImage" src="" alt="Large Image">
+                    <div class="modalExtraText">
+                        <p id="modalExtraText"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const photos = document.querySelectorAll('.photo');
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modalImage');
+            const modalExtraText = document.getElementById('modalExtraText');
+            const header = document.getElementById('header');
+
+            photos.forEach(photo => {
+                photo.addEventListener('click', function() {
+                    const largeSrc = this.getAttribute('data-large-src');
+                    const extraText = this.getAttribute('data-extra-text');
+                    modalImage.src = largeSrc;
+                    modalExtraText.innerHTML = extraText || '';
+                    modal.style.display = 'flex';
+                    header.style.display = 'none';
+                    setTimeout(() => {
+                        modal.classList.add('show');
+                    }, 10);
+                });
+            });
+
+            modal.addEventListener('click', function(e) {
+                if (!modal.querySelector('.modalBody').contains(e.target)) {
+                    modal.classList.remove('show');
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                        header.style.display = 'flex';
+                    }, 500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

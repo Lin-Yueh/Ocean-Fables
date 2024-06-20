@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    font-family: 'SimSun', '宋体', sans-serif;
+    font-weight: bold;
+}
+
+.logo-container {
+    width: 80px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 0 1%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(244, 243, 235);
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    position: sticky;
+    outline: none;
+    color: #1e237a;
+    font-size: larger;
+    font-family: "微软雅黑", "Microsoft YaHei", "微软雅黑", "Arial", sans-serif;
+}
+
+.header img {
+    width: 80px;
+    height: auto;
+}
+
+nav{
+    margin: 0 1% 0 0;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar a {
+    color: inherit;
+    padding: 10px;
+    text-decoration: none;
+    display: block; 
+}
+
+.navbar li:hover {
+    background-color: rgb(165, 162, 139);
+    color: white;
+}
+
+.title {
+    white-space: nowrap;
+    margin: 0 0 0 1%;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/SeaTurtle.jpg);
+    background-size: cover;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+} 
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Q {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.body{
+    padding: 3%;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+form {
+    width: 35%;
+    justify-content: center;
+}
+
+.time {
+    text-align: left;
+    padding: 0 0 0 10%;
+}
+
+.YN {
+    padding: 1% 0 1% 0;
+}
+
+p {
+    display: inline;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-btn, .reset-btn {
+    width: 20%;
+    padding: 10px;
+    background-color: #506ed0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin: 2%;
+}
+
+.submit-btn:hover, .reset-btn:hover {
+    background-color: #ffffff;
+    color: #506ed0;
+    border: 2px solid #506ed0;
+}
